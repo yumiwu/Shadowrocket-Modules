@@ -1,5 +1,5 @@
-#!name=TikTok
-#!desc=Converted from Loon: TikTok
+#!name=!name = TikTok解锁
+#!desc=来源: Loon (TikTok)
 
 [Rule]
 DOMAIN-KEYWORD,tiktokcdn,PROXY

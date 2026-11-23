@@ -1,5 +1,5 @@
-#!name=ADBlock
-#!desc=Converted from QX: ADBlock
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (ADBlock)
 
 [URL Rewrite]
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery - reject

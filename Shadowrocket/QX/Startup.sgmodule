@@ -1,5 +1,5 @@
-#!name=Startup
-#!desc=Converted from QX: Startup
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (Startup)
 
 [URL Rewrite]
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start - reject-dict

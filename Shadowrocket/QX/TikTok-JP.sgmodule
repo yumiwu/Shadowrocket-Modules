@@ -1,5 +1,5 @@
-#!name=TikTok-JP
-#!desc=Converted from QX: TikTok-JP
+#!name=TikTok 重写
+#!desc=来源: QX (TikTok-JP)
 
 [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307

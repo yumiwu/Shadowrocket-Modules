@@ -1,5 +1,5 @@
-#!name=Convert
-#!desc=Converted from Loon: Convert
+#!name=!name = 远程资源转换器
+#!desc=来源: Loon (Convert)
 
 [Script]
 QX转化Loon = type=http-request, pattern=^https?:\/\/.+\/[^/]+\.[^/]+(qx$|qx\?.+=), script-path=https://github.com/chengkongyiban/stash/raw/main/js/QX_Rewrite_Parser.js, requires-body=1, timeout=10

@@ -1,5 +1,5 @@
-#!name=Zhihu
-#!desc=Converted from QX: Zhihu
+#!name=知乎处理用户信息
+#!desc=来源: QX (Zhihu)
 
 [URL Rewrite]
 ^http[s]?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2 - reject-dict

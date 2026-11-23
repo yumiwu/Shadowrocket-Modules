@@ -1,5 +1,5 @@
-#!name=ScriptHub
-#!desc=Converted from Loon: ScriptHub
+#!name=!desc = Script Hub: 重写 & 规则集转换
+#!desc=来源: Loon (ScriptHub)
 
 [Rule]
 DOMAIN,scripthub.vercel.app,PROXY

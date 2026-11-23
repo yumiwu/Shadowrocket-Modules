@@ -1,5 +1,5 @@
-#!name=Amap
-#!desc=Converted from QX: Amap
+#!name=原链接:https://raw.githubusercontent.com/Ru
+#!desc=来源: QX (Amap)
 
 [URL Rewrite]
 ^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? - reject-dict

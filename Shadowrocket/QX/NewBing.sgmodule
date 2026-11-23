@@ -1,5 +1,5 @@
-#!name=NewBing
-#!desc=Converted from QX: NewBing
+#!name=原链接：https://raw.githubusercontent.com/No
+#!desc=来源: QX (NewBing)
 
 [MITM]
 hostname = %APPEND% www.bing.com

@@ -1,5 +1,5 @@
-#!name=Search
-#!desc=Converted from QX: Search
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (Search)
 
 [URL Rewrite]
 ^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302

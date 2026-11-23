@@ -1,5 +1,5 @@
-#!name=Ximalaya
-#!desc=Converted from QX: Ximalaya
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (Ximalaya)
 
 [URL Rewrite]
 https?:\/\/.*\.xima.*\.com/discovery-feed/isShowUserGiftPendant - reject

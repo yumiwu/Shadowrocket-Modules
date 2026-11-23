@@ -1,5 +1,5 @@
-#!name=Kuwo
-#!desc=Converted from Loon: Kuwo
+#!name=!name = 酷我音乐VIP
+#!desc=来源: Loon (Kuwo)
 
 [Script]
 酷我音乐 = type=http-response, pattern=^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn\/(?:music\.pay\?newver=\d+|mobi.s\?f=kwxs|vip\/(?:enc\/user\/vip\?op=ui&uid=|v2\/theme\?op=gd)|a\.p|v2\/api\/pay\/user\/info), script-path=https://github.com/Moli-X/Resources/raw/main/Loon/Kuwo/Kuwo.js, requires-body=1, timeout=60

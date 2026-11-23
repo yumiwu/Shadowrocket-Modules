@@ -1,5 +1,5 @@
-#!name=WPS
-#!desc=Converted from QX: WPS
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (WPS)
 
 [Script]
 WPS_1 = type=http-response, pattern=^https?:\/\/(account|drive|vas|userinfo.docer)\.wps\.cn\/(.*api\/(v3\/(mine\/vips|spaces)|users\/\d+\/overview|v1\/list_purchase_info)|user\/v1\/vip_dl_times), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSuperVIPuserCrack.js

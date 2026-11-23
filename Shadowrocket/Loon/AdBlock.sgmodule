@@ -1,5 +1,5 @@
-#!name=AdBlock
-#!desc=Converted from Loon: AdBlock
+#!name=!name = 广告过滤器
+#!desc=来源: Loon (AdBlock)
 
 [Script]
 12306_33 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=1, timeout=60

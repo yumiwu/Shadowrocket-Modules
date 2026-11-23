@@ -1,5 +1,5 @@
-#!name=Soul
-#!desc=Converted from QX: Soul
+#!name=> Soul 破解部分超星特权
+#!desc=来源: QX (Soul)
 
 [Script]
 Soul_1 = type=http-response, pattern=^https?:\/\/.+(\/privilege\/supervip\/status|\/show\/superVIP\/detail|\/meet\/invisible\/saveByUserId|\/special\/concern\/setting|\/chat\/history\/setting|\/privilege\/bubble\/buy|\/soul-coin\/total|\/user\/queryInvisibleSetting|\/chat\/limitInfo), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SoulSuperVipCrack.js

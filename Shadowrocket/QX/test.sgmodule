@@ -1,5 +1,5 @@
 #!name=test
-#!desc=Converted from QX: test
+#!desc=来源: QX (test)
 
 [URL Rewrite]
 ^https:\/\/duckduckgo.com\/\?q=dg\+([^&]+).+ https://duckduckgo.com/?q=$1&ia=web 302

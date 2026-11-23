@@ -1,5 +1,5 @@
-#!name=Story
-#!desc=Converted from Loon: Story
+#!name=!name = 短视频
+#!desc=来源: Loon (Story)
 
 [Script]
 Story_1 = type=http-request, pattern=^^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?, script-path=https://github.com/Moli-X/Resources/raw/main/Script/Bilibili/Story.js, timeout=60

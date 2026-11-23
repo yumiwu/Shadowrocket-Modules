@@ -1,5 +1,5 @@
-#!name=BaiduMap
-#!desc=Converted from QX: BaiduMap
+#!name=> 百度地图_搜索推广
+#!desc=来源: QX (BaiduMap)
 
 [URL Rewrite]
 ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui.*qt=hw - reject-200

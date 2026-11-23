@@ -1,5 +1,5 @@
-#!name=Pdfviewer
-#!desc=Converted from Loon: Pdfviewer
+#!name=修改
+#!desc=来源: Loon (Pdfviewer)
 
 [Script]
 Revenuecat_2 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=1, timeout=60

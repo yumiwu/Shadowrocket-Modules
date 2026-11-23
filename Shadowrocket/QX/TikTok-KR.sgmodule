@@ -1,5 +1,5 @@
-#!name=TikTok-KR
-#!desc=Converted from QX: TikTok-KR
+#!name=TikTok 重写
+#!desc=来源: QX (TikTok-KR)
 
 [URL Rewrite]
 (?<=_region=)CN(?=&) KR 307

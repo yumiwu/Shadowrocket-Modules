@@ -1,5 +1,5 @@
-#!name=Keep
-#!desc=Converted from Loon: Keep
+#!name=!desc = 课程预览&直播课&会员&去广告
+#!desc=来源: Loon (Keep)
 
 [Rule]
 DOMAIN, httpdns.n.netease.com, REJECT

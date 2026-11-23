@@ -1,5 +1,5 @@
-#!name=TikTok-TW
-#!desc=Converted from QX: TikTok-TW
+#!name=TikTok 重写
+#!desc=来源: QX (TikTok-TW)
 
 [URL Rewrite]
 (?<=_region=)CN(?=&) TW 307

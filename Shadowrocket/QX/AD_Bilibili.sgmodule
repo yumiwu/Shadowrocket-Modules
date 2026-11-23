@@ -1,5 +1,5 @@
-#!name=AD_Bilibili
-#!desc=Converted from QX: AD_Bilibili
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (AD_Bilibili)
 
 [URL Rewrite]
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject

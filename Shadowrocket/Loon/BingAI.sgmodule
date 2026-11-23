@@ -1,5 +1,5 @@
-#!name=BingAI
-#!desc=Converted from Loon: BingAI
+#!name=!desc = 将Safari浏览器伪装为Edge浏览器
+#!desc=来源: Loon (BingAI)
 
 [Script]
 Bing AI = type=http-request, pattern=^https:\/\/www\.bing\.com\/(search|new), script-path = https://raw.githubusercontent.com/Moli-X/Resources/main/Script/BingAI.js, requires-body = false

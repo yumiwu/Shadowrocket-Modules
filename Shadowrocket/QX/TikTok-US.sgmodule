@@ -1,5 +1,5 @@
-#!name=TikTok-US
-#!desc=Converted from QX: TikTok-US
+#!name=TikTok 重写
+#!desc=来源: QX (TikTok-US)
 
 [URL Rewrite]
 (?<=_region=)CN(?=&) US 307

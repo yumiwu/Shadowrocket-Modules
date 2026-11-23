@@ -1,5 +1,5 @@
-#!name=Spotify
-#!desc=Converted from QX: Spotify
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (Spotify)
 
 [Script]
 Spotify_1 = type=http-response, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js

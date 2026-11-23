@@ -1,5 +1,5 @@
-#!name=Youtube
-#!desc=Converted from Loon: Youtube
+#!name=!desc = 适用于 Youtube & Youtube Music
+#!desc=来源: Loon (Youtube)
 
 [Rule]
 AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT

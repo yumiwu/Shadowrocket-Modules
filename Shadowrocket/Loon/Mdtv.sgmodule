@@ -1,5 +1,5 @@
-#!name=Mdtv
-#!desc=Converted from Loon: Mdtv
+#!name=!name = 美队tv
+#!desc=来源: Loon (Mdtv)
 
 [Script]
 美队tv = type=http-response, pattern=^https?:\/\/api.+.com\/api\/video\/(user/info|banner\?type|config\?field), script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/mdtv.js, requires-body=1, timeout=60

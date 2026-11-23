@@ -1,5 +1,5 @@
-#!name=Collections
-#!desc=Converted from QX: Collections
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (Collections)
 
 [URL Rewrite]
 ^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads - reject-dict

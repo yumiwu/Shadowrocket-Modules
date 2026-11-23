@@ -1,5 +1,5 @@
-#!name=TB_JDPrices
-#!desc=Converted from QX: TB_JDPrices
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (TB_JDPrices)
 
 [Script]
 TB_JDPrices_1 = type=http-response, pattern=^http://.+/amdc/mobileDispatch, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/TBPrice.js

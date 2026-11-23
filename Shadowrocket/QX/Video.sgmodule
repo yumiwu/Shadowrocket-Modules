@@ -1,5 +1,5 @@
-#!name=Video
-#!desc=Converted from QX: Video
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (Video)
 
 [URL Rewrite]
 ^https?:\/\/m\.iqiyi\.com\/v_.*) https://z1.m1907.cn/?jx=$1 307

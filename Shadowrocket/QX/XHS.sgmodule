@@ -1,5 +1,5 @@
-#!name=XHS
-#!desc=Converted from QX: XHS
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (XHS)
 
 [URL Rewrite]
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/tag\/ads_engage - reject-dict

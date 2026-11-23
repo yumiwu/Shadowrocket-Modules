@@ -1,5 +1,5 @@
-#!name=StartUp
-#!desc=Converted from Loon: StartUp
+#!name=!name = 开屏广告过滤器
+#!desc=来源: Loon (StartUp)
 
 [Script]
 JD_11 = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotWords, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/JD/JD.js, requires-body=1, timeout=60

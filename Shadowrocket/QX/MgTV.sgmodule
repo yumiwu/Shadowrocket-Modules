@@ -1,5 +1,5 @@
-#!name=MgTV
-#!desc=Converted from QX: MgTV
+#!name=仓库地址: https://github.com/Moli-X
+#!desc=来源: QX (MgTV)
 
 [URL Rewrite]
 ^https?://mobile.da.mgtv.com\/m\/page - reject
