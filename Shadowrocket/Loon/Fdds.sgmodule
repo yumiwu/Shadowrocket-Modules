@@ -1,0 +1,9 @@
+#!name=Fdds
+#!desc=Converted from Loon: Fdds
+
+[Script]
+樊登读书 = type=http-response, pattern=^https?:\/\/.+dushu365.com\/(sns-orchestration-system\/homePage\/api\/v100\/myPage|smart-orch\/program|smart-orch\/course\/v100\/info|innovation-orchestration\/api\/ebook\/v100\/ebookInfo), script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/fdds.js, requires-body=1, timeout=60
+樊登读书 = type=http-request, pattern=^https?:\/\/.+dushu365.com\/resource-orchestration-system\/book\/v101\/content, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/fdtk.js , requires-body=1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.dushu365.com, gw2.dushu365.com, gw1.dushu365.com

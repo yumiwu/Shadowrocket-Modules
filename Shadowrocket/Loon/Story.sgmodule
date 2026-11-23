@@ -1,0 +1,8 @@
+#!name=Story
+#!desc=Converted from Loon: Story
+
+[Script]
+Story_1 = type=http-request, pattern=^^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\?, script-path=https://github.com/Moli-X/Resources/raw/main/Script/Bilibili/Story.js, timeout=60
+
+[MITM]
+hostname = %APPEND% app.bilibili.com

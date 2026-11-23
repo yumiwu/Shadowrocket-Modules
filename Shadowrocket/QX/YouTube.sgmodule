@@ -1,0 +1,5 @@
+#!name=YouTube
+#!desc=Converted from QX: YouTube
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com

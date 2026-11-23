@@ -1,0 +1,8 @@
+#!name=SparkMail
+#!desc=Converted from Loon: SparkMail
+
+[Script]
+SparkMail_13 = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/(\$RCAnonymousID%)?(\w)*$), script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/SparkMail.js, requires-body=1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com

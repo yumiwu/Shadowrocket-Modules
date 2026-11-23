@@ -1,0 +1,11 @@
+#!name=获取Cookie
+#!desc=适用于Loon脚本获取Cookie
+
+[Script]
+华住会获取签到Cookie = type=http-request, pattern=https:\/\/appgw\.huazhu\.com\/game\/sign_header, script-path=https://github.com/Moli-X/Resources/raw/main/Script/Hzh.js, requires-body=0, img-url=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/picture/hzh.png
+京东获取cookie = type=http-request, pattern=^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?), script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png
+京东获取cookie = type=http-request, pattern=^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/hy\/h5\/m\/appSign\?, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png
+阿里网盘token获取 = type=http-request, pattern=^https:\/\/auth\.aliyundrive\.com\/v2\/account\/token, script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=1, timeout=10, enabled=false, img-url=https://raw.githubusercontent.com/Moli-X/Resources/main/Icon/Image/AL.png
+
+[MITM]
+hostname = %APPEND% appgw.huazhu.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, auth.aliyundrive.com, mcs-mimp-web.sf-express.com

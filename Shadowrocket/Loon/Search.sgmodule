@@ -1,0 +1,5 @@
+#!name=超级搜索
+#!desc=适用于Safari的超级搜索
+
+[MITM]
+hostname = %APPEND% duckduckgo.com, whatshub.top, www.google.com

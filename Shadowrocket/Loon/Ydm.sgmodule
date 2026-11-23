@@ -1,0 +1,8 @@
+#!name=淫荡猫
+#!desc=3.10最新版
+
+[Script]
+ydm = type=http-response, pattern=https:\/\/(dd38dkt7dfvyr|d2x03a61ogs2x5|d3lijns9322mkl)\.cloudfront\.net\/api\/(video\/getVideoById|user\/base\/info|community\/dynamic\/dynamicInfo), script-path=https://github.com/Moli-X/Resources/raw/main/Script/ydm.js, requires-body=1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.cloudfront.net

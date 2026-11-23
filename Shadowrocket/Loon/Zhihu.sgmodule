@@ -1,0 +1,25 @@
+#!name=知乎净化
+#!desc=去除知乎广告
+
+[Script]
+Zhihu_1 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/people\/, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_2 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/feed-root\/block, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_3 = type=http-response, pattern=^https?:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_4 = type=http-response, pattern=^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/config, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_5 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/user-credit\/basis, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_6 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/moments_v3\?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_7 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/topstory\/recommend, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_8 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/settings\/blocked_users, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_9 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_10 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/next-data, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_11 = type=http-response, pattern=^https?:\/\/www\.zhihu\.com\/api\/v4\/comment_v5\/answers\/\d+\/abstract_comment\?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_12 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/(comment_v5\/)?(answers|comments?|articles|pins)\/\d+\/(root_|child_)?comments?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_13 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message), requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_14 = type=http-response, pattern=^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_15 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/next\?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_16 = type=http-response, pattern=^https?:\/\/www\.zhihu\.com\/api\/v\d\/articles\/\d+\/recommendation\?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_17 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists?(\?|\/), requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+Zhihu_18 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/search\/preset_words\?, requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+
+[MITM]
+hostname = %APPEND% 118.89.204.198, 103.41.167.237, 2402:4e00:1200:ed00:0:9089:6dac:96b6, www.zhihu.com, api.zhihu.com, zhuanlan.zhihu.com, appcloud2.zhihu.com, m-cloud.zhihu.com, 103.41.167.236, 103.41.167.234, 103.41.167.235, 103.41.167.226, 61.243.13.*, 58.144.248.*, 120.92.107.*, datahub.zhihu.com, sugar.zhihu.com, appcloud.zhihu.com, duga.zhihu.com, web-er.zhihu.com, lens.zhihu.com, 58.144.248.94, 14.204.51.105, 113.62.116.232, 103.41.167.*, 103*, 183.204.14.111, 125.77.176*, 27.148*, 183.204*, 122.224*, 60.188.72*, 120.220*, 120.222*, 150.109.91*, *.zhihu.*

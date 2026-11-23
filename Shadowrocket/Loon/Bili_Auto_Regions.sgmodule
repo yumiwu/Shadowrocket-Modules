@@ -1,0 +1,9 @@
+#!name=哔哩哔哩自动切换地区
+#!desc=哔哩哔哩(白图标外区版), 港澳台番剧自动切换地区 & 显示豆瓣评分
+
+[Script]
+bili自动地区 = type=http-response, pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\?, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js, requires-body=1
+bili自动地区(搜索) = type=http-request, pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+
+[MITM]
+hostname = %APPEND% ap?.bili*i.com, ap?.bili*i.net

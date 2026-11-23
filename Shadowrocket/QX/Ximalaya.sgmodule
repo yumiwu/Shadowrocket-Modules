@@ -1,0 +1,22 @@
+#!name=Ximalaya
+#!desc=Converted from QX: Ximalaya
+
+[URL Rewrite]
+https?:\/\/.*\.xima.*\.com/discovery-feed/isShowUserGiftPendant - reject
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread - reject
+^https?:\/\/.*\.xima.*\.com/collector/xl/v\d - reject
+^https?:\/\/.*\.xima.*\.com/butler-portal/versionCheck - reject
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* - reject
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location - reject
+^https?:\/\/.*\.xima.*\.com\/hotWord - reject
+^https?:\/\/.*\.xima.*\.com\/guideWord - reject
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
+
+[Script]
+Ximalaya_1 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Ximalaya.js
+Ximalaya_2 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Ximalaya.js
+Ximalaya_3 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Ximalaya.js
+
+[MITM]
+hostname = %APPEND% *.xima*.*, *.xmcdn.*

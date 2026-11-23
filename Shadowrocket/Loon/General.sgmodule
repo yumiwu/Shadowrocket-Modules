@@ -1,0 +1,5 @@
+#!name=配置增强
+#!desc=跳过部分代理,返回真实IP段
+
+[MITM]
+hostname = %APPEND% -gateway.icloud.com, -gateway.icloud.com.cn, -weather-data.apple.com, -pan.baidu.com

@@ -1,0 +1,8 @@
+#!name=Lightroom
+#!desc=Converted from QX: Lightroom
+
+[Script]
+Lightroom_1 = type=http-response, pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*, requires-body=1, max-size=0, script-path=https://github.com/Moli-X/Resources/raw/main/Script/Lightroom.js
+
+[MITM]
+hostname = %APPEND% lcs-mobile-cops.adobe.io, photos.adobe.io

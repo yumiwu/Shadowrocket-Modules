@@ -1,0 +1,5 @@
+#!name=NewBing
+#!desc=Converted from QX: NewBing
+
+[MITM]
+hostname = %APPEND% www.bing.com

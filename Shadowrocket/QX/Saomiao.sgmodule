@@ -1,0 +1,8 @@
+#!name=Saomiao
+#!desc=Converted from QX: Saomiao
+
+[Script]
+Saomiao_1 = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Saomiao.js
+
+[MITM]
+hostname = %APPEND% ap*.intsig.net

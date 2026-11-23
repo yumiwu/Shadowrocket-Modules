@@ -1,0 +1,11 @@
+#!name=Video
+#!desc=Converted from QX: Video
+
+[URL Rewrite]
+^https?:\/\/m\.iqiyi\.com\/v_.*) https://z1.m1907.cn/?jx=$1 307
+^https?:\/\/m\.youku\.com\/.*) https://z1.m1907.cn/?jx=$1 307
+^https?:\/\/m\.v\.qq\.com\/x\/(m\/)?play.*) https://z1.m1907.cn/?jx=$1 307
+^https?:\/\/m\.bilibili\.com\/bangumi\/play\/.*) https://z1.m1907.cn/?jx=$1 307
+
+[MITM]
+hostname = %APPEND% m.iqiyi.com, z1.m1907.cn, m.youku.com, m.v.qq.com, m.bilibili.com

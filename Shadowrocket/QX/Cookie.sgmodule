@@ -1,0 +1,10 @@
+#!name=Cookie
+#!desc=Converted from QX: Cookie
+
+[Script]
+Cookie_1 = type=http-request, pattern=^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?), requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+Cookie_2 = type=http-request, pattern=^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/hy\/h5\/m\/appSign\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+Cookie_3 = type=http-request, pattern=^https:\/\/hweb-mbf\.huazhu\.com\/api\/signIn, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, hweb-mbf.huazhu.com

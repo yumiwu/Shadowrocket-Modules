@@ -1,0 +1,8 @@
+#!name=BingAI
+#!desc=Converted from Loon: BingAI
+
+[Script]
+Bing AI = type=http-request, pattern=^https:\/\/www\.bing\.com\/(search|new), script-path = https://raw.githubusercontent.com/Moli-X/Resources/main/Script/BingAI.js, requires-body = false
+
+[MITM]
+hostname = %APPEND% www.bing.com

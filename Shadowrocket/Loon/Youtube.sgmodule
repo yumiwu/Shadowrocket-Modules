@@ -1,0 +1,16 @@
+#!name=Youtube
+#!desc=Converted from Loon: Youtube
+
+[Rule]
+AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
+
+[URL Rewrite]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-dict
+
+[Script]
+YouTube请求 = type=http-request, pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch), script-path = https://github.com/Moli-X/Resources/raw/main/Loon/YouTube/request.preview.js, requires-body = true, binary-body-mode = true
+YouTube响应 = type=http-response, pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch), script-path = https://github.com/Moli-X/Resources/raw/main/Loon/YouTube/remove_ads_response.js, requires-body = true, binary-body-mode = true
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com

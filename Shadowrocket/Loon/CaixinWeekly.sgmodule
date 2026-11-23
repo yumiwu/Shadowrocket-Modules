@@ -1,0 +1,14 @@
+#!name=财新周刊
+#!desc=解锁订阅，财新去广告
+
+[Script]
+财新周刊 = type=http-response, pattern=^https?:\/\/ipadcms\.caixin\.com\/(api\/article\/getMagazineArticleList|tmp\/articles)\/\d+, script-path=https://gist.githubusercontent.com/yqc007/eadf2d5a7465fb759dc7dec436151a79/raw/CaixinWeekly.js, requires-body=1, timeout=60
+caixin_6 = type=http-response, pattern=^https:\/\/entities\.caixin\.com\/api\/dataplus\/columns, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=1, timeout=60
+caixin_8 = type=http-response, pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/(caixinapp\/appinfo|search\/getkeyword), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=1, timeout=60
+caixin_13 = type=http-response, pattern=^https:\/\/gateway\.caixin\.com\/api\/app-content\/fm\/index\/list\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=1, timeout=60
+caixin_15 = type=http-response, pattern=^https:\/\/gg\.caixin\.com\/s\?z=caixin&op=\d, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=1, timeout=60
+caixin_18 = type=http-response, pattern=^https:\/\/mappsv5\.caixin\.com\/articlev5\/\d+\/\d+\.json$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=1, timeout=60
+caixin_19 = type=http-response, pattern=^https:\/\/mapps?v5\.caixin\.com\/(channelv5\/list|\/?index_page_v5\/)\w+, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=1, timeout=60
+
+[MITM]
+hostname = %APPEND% ipadcms.caixin.com, e*.caixin.com, g*.caixin.com, m*.caixin.com

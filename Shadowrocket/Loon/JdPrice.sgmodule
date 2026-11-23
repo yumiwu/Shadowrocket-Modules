@@ -1,0 +1,8 @@
+#!name=京东比价
+#!desc=需在商品详情页面查看比价内容
+
+[Script]
+京东比价 = type=http-response, pattern=^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/Moli-X/Tool/0ff709e831d9fc1958f44ed6aca3ffb27056daa6/Loon/Plugin/Kelee/Script/JD_Price.js,requires-body=1,timeout=10
+
+[MITM]
+hostname = %APPEND% in.m.jd.com

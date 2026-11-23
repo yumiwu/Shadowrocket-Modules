@@ -1,0 +1,8 @@
+#!name=PS
+#!desc=Converted from QX: PS
+
+[Script]
+PS_1 = type=http-response, pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile, requires-body=1, max-size=0, script-path=https://github.com/Moli-X/Resources/raw/main/Script/PS.js
+
+[MITM]
+hostname = %APPEND% lcs-mobile-cops.adobe.io, photos.adobe.io

@@ -1,0 +1,6 @@
+#!name=test
+#!desc=Converted from QX: test
+
+[URL Rewrite]
+^https:\/\/duckduckgo.com\/\?q=dg\+([^&]+).+ https://duckduckgo.com/?q=$1&ia=web 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+dg.+ https://duckduckgo.com/?q=$1&ia=web 302

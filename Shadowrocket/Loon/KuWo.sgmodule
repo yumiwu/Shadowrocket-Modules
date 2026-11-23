@@ -1,0 +1,18 @@
+#!name=KuWo
+#!desc=Converted from Loon: KuWo
+
+[Rule]
+USER-AGENT,KWPlayer*,PROXY
+DOMAIN-SUFFIX,kuwo.cn,PROXY
+
+[Script]
+酷我音乐 = type=http-response, pattern=^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/audi.tion|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic))|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)), script-path=https://github.com/Moli-X/Resources/raw/main/Script/Kuwo.js, requires-body=1, timeout=60, img-url=https://github.com/Moli-X/Resources/raw/main/Icon/Other/KuWo.png
+kuwomusic_30 = type=http-response, pattern=https?:\/\/searchrecterm\.kuwo\.cn\/recterm\.s, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, requires-body=1, timeout=60
+kuwomusic_32 = type=http-response, pattern=https?:\/\/mgxhtj\.kuwo\.cn\/mgxh\.s, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, requires-body=1, timeout=60
+kuwomusic_34 = type=http-response, pattern=https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/page\/cells, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, requires-body=1, timeout=60
+kuwomusic_36 = type=http-response, pattern=https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/setting, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, requires-body=1, timeout=60
+kuwomusic_40 = type=http-response, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, requires-body=1, timeout=60
+kuwomusic_52 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme, script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js, requires-body=1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.kuwo.cn
