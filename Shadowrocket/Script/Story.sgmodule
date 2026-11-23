@@ -1,0 +1,8 @@
+#!name=Story
+#!desc=来源: Script (Script/Bilibili/Story.js)
+
+[Script]
+Story_1 = type=http-request, pattern=^https?:\/\/app\.bilibili\.com\/x\/v\d\/feed\/index\?, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Bilibili/Story.js
+
+[MITM]
+hostname = %APPEND% app.bilibili.com

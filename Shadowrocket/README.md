@@ -102,3 +102,40 @@
 | 喜马拉雅去广告 | [Ximalaya.sgmodule](./QX/Ximalaya.sgmodule) |
 | 油管去广告画中画 | [YouTube.sgmodule](./QX/YouTube.sgmodule) |
 | 知乎处理用户信息 | [Zhihu.sgmodule](./QX/Zhihu.sgmodule) |
+
+## 独立 JS 脚本转换模块（Script 目录）
+
+| 中文功能 | 模块文件 |
+|---|---|
+| AliYun_Vip | [AliYun_Vip.sgmodule](./Script/AliYun_Vip.sgmodule) |
+| ✅百度文库 | [Baiduwk.sgmodule](./Script/Baiduwk.sgmodule) |
+| > 百度云倍速 | [Baiduyun.sgmodule](./Script/Baiduyun.sgmodule) |
+| > 拦截100解锁永久超级会员 | [Block100.sgmodule](./Script/Block100.sgmodule) |
+| 茶杯狐 | [Cupbox.sgmodule](./Script/Cupbox.sgmodule) |
+| DHYbilibili | [DHYbilibili.sgmodule](./Script/DHYbilibili.sgmodule) |
+| 饿了么获取COOKIE | [elemGetCookies.sgmodule](./Script/elemGetCookies.sgmodule) |
+| 饿了么签到 | [elemSign.sgmodule](./Script/elemSign.sgmodule) |
+| FDdushu | [FDdushu.sgmodule](./Script/FDdushu.sgmodule) |
+| Hzh | [Hzh.sgmodule](./Script/Hzh.sgmodule) |
+| 京东比价弹窗版 | [JDPriceLite.sgmodule](./Script/JDPriceLite.sgmodule) |
+| Keep | [Keep.sgmodule](./Script/Keep.sgmodule) |
+| 酷我音乐SVIP+净化 | [Kuwo.sgmodule](./Script/Kuwo.sgmodule) |
+| Lightroom | [Lightroom.sgmodule](./Script/Lightroom.sgmodule) |
+| ✅美图秀秀vip | [MeiTu.sgmodule](./Script/MeiTu.sgmodule) |
+| 美图秀秀VIP+粉钻 | [MTxiuxiu.sgmodule](./Script/MTxiuxiu.sgmodule) |
+| Nicegram | [Nicegram.sgmodule](./Script/Nicegram.sgmodule) |
+| Pornhub去广告 | [Pornhub.sgmodule](./Script/Pornhub.sgmodule) |
+| PS | [PS.sgmodule](./Script/PS.sgmodule) |
+| 扫描全能王 | [Saomiao.sgmodule](./Script/Saomiao.sgmodule) |
+| Sheep | [Sheep.sgmodule](./Script/Sheep.sgmodule) |
+| Soul解除送礼私聊限制 | [Soul.sgmodule](./Script/Soul.sgmodule) |
+| Story | [Story.sgmodule](./Script/Story.sgmodule) |
+| TopWidgets | [TopWidgets.sgmodule](./Script/TopWidgets.sgmodule) |
+| WeChatUrl - 微信链接跳转 | [Wechat.sgmodule](./Script/Wechat.sgmodule) |
+| 小红书去广告 | [Xiaohongshu.sgmodule](./Script/Xiaohongshu.sgmodule) |
+| YouDaoDictionary - 网易有道词典 | [YDictionary.sgmodule](./Script/YDictionary.sgmodule) |
+| 会员相关 API 修改 | [ydm.sgmodule](./Script/ydm.sgmodule) |
+| 直连模式 | [ZLBilibili.sgmodule](./Script/ZLBilibili.sgmodule) |
+| 转成繁体 | [ZMBilibili.sgmodule](./Script/ZMBilibili.sgmodule) |
+| IDPhoto - 最美证件照 | [ZmPhoto.sgmodule](./Script/ZmPhoto.sgmodule) |
+| ZsHc | [ZsHc.sgmodule](./Script/ZsHc.sgmodule) |

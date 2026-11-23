@@ -1,0 +1,9 @@
+#!name=Sheep
+#!desc=来源: Script (Script/Sheep.js)
+
+[Script]
+Sheep_1 = type=http-response, pattern=^https://cat-match\.easygame2021.com/sheep/v1/game/map(.*), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Sheep.js
+Sheep_2 = type=http-response, pattern=^https:\/\/.+\.easygame2021\.com\/.+, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Sheep.js
+
+[MITM]
+hostname = %APPEND% *.easygame2021.com

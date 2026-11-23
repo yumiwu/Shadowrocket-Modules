@@ -1,0 +1,8 @@
+#!name=ZsHc
+#!desc=来源: Script (Script/ZsHc.js)
+
+[Script]
+ZsHc_1 = type=http-request, pattern=https:\/\/zshcapp\.dataserver\.cn\/login, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/ZsHc.js
+
+[MITM]
+hostname = %APPEND% zshcapp.dataserver.cn

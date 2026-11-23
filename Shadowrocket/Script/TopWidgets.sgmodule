@@ -1,0 +1,8 @@
+#!name=TopWidgets
+#!desc=来源: Script (Script/TopWidgets.js)
+
+[Script]
+TopWidgets_1 = type=http-response, pattern=^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/TopWidgets.js
+
+[MITM]
+hostname = %APPEND% *xiaozujian.com

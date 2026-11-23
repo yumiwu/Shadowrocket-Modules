@@ -1,0 +1,8 @@
+#!name=YouDaoDictionary - 网易有道词典
+#!desc=来源: Script (Script/YDictionary.js)
+
+[Script]
+YDictionary_1 = type=http-response, pattern=^https:\/\/dict\.youdao\.com\/vip\/user\/status, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/YDictionary.js
+
+[MITM]
+hostname = %APPEND% dict.youdao.com

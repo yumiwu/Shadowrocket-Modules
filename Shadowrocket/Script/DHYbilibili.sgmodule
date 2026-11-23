@@ -1,0 +1,18 @@
+#!name=DHYbilibili
+#!desc=来源: Script (Script/Bilibili/DHYbilibili.js)
+
+[URL Rewrite]
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+^http[s]?:\/\/api\.bilibili\.com\/x\/member\/app\/face\/update\?access_key - reject-200
+^http[s]?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Teenagers\/UpdateStatus - reject-200
+^http[s]?:\/\/api\.bilibili\.com\/x\/member\/app\/uname\/update\?_device - reject-200
+^http[s]?:\/\/passport\.bilibili\.com\/x\/passport-login\/revoke - reject
+^http[s]?:\/\/app\.bilibili\.com\/x\/v2\/splash\/show - reject-dict
+
+[Script]
+DHYbilibili_1 = type=http-response, pattern=^http[s]?:\/\/((app)|(passport)|(api))\.bilibili\.com\/x\/.*(account\/mine\?|passport-login|vip|show\/tab|account\/myinfo\?).*$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Bilibili/DHYbilibili.js
+DHYbilibili_2 = type=http-request, pattern=^http[s]?:\/\/((app)|(passport)|(api))\.bilibili\.com\/(bilibili|x\/v2|x\/vip|x\/resource|x\/passport).*$, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Bilibili/DHYbilibili.js
+DHYbilibili_3 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Bilibili/DHYbilibili.js
+
+[MITM]
+hostname = %APPEND% *.biliapi.*, *.bilibili.*

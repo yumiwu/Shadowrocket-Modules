@@ -1,0 +1,11 @@
+#!name=会员相关 API 修改
+#!desc=来源: Script (Script/ydm.js)
+
+[URL Rewrite]
+^https:\/\/(?:dd38dkt7dfvyr|d2x03a61ogs2x5|d3lijns9322mkl)\.cloudfront\.net\/api\/(?:sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject
+
+[Script]
+ydm_1 = type=http-response, pattern=https:\/\/(dd38dkt7dfvyr|d2x03a61ogs2x5|d3lijns9322mkl)\.cloudfront\.net\/api\/(video\/getVideoById|user\/base\/info|community\/dynamic\/dynamicInfo), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/ydm.js
+
+[MITM]
+hostname = %APPEND% *.cloudfront.net

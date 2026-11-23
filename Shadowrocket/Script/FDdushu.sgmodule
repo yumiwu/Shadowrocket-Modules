@@ -1,0 +1,8 @@
+#!name=FDdushu
+#!desc=来源: Script (Script/FDdushu.js)
+
+[Script]
+FDdushu_1 = type=http-response, pattern=^http[s]?:\/\/.+dushu.+(v101|v100|program/v100)\/(content|play/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/FDdushu.js
+
+[MITM]
+hostname = %APPEND% *dushu*

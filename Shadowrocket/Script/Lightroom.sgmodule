@@ -1,0 +1,8 @@
+#!name=Lightroom
+#!desc=来源: Script (Script/Lightroom.js)
+
+[Script]
+Lightroom_1 = type=http-response, pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Lightroom.js
+
+[MITM]
+hostname = %APPEND% lcs-mobile-cops.adobe.io, photos.adobe.io
