@@ -1,13 +1,15 @@
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 UPSTREAM_DIR = Path("upstream_repo")
 OUTPUT_DIR = Path("Shadowrocket")
+RAW_BASE = "https://raw.githubusercontent.com/Moli-X/Resources/main"
 
 (OUTPUT_DIR / "Loon").mkdir(parents=True, exist_ok=True)
 (OUTPUT_DIR / "QX").mkdir(parents=True, exist_ok=True)
+(OUTPUT_DIR / "Script").mkdir(parents=True, exist_ok=True)
 
-# 常见缩写兜底词典（防止注释和 Readme 都没写清）
 COMMON_NAMES = {
     "collections": "莫离合集（会员解锁）",
     "adblock": "莫离去广告",
@@ -38,9 +40,9 @@ COMMON_NAMES = {
     "qidian": "起点读书去广告",
     "pinduoduo": "拼多多去广告",
     "cainiao": "菜鸟裹裹去广告",
+    "lths": "聊天话术VIP",
 }
 
-# 注释中需要跳过的垃圾信息关键词
 IGNORE_KEYWORDS = (
     "http", "github", "t.me", "仓库", "地址", "频道", "电报", "群组",
     "作者", "更新", "时间", "日期", "反馈", "交流", "禁止", "转载",
@@ -49,7 +51,6 @@ IGNORE_KEYWORDS = (
 
 
 def load_readme_map() -> dict:
-    """从源仓库 Readme.md（兼容 Markdown 和 HTML 表格）提取 文件名 -> 中文功能"""
     mapping = {}
     readme = UPSTREAM_DIR / "Readme.md"
     if not readme.exists():
@@ -57,7 +58,6 @@ def load_readme_map() -> dict:
 
     text = readme.read_text(encoding="utf-8", errors="ignore")
 
-    # 1. 解析 Markdown 表格行
     for line in text.splitlines():
         if "|" not in line:
             continue
@@ -71,7 +71,6 @@ def load_readme_map() -> dict:
                 if desc and not desc.isdigit() and re.search(r"[\u4e00-\u9fff]", desc):
                     mapping[stem] = desc
 
-    # 2. 解析 HTML 表格行 (<tr><td>功能</td><td>链接</td></tr>)
     for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", text, flags=re.S | re.I):
         tds = re.findall(r"<td[^>]*>(.*?)</td>", tr, flags=re.S | re.I)
         for i, td in enumerate(tds):
@@ -86,32 +85,25 @@ def load_readme_map() -> dict:
 
 
 def extract_chinese_hint(content: str) -> str:
-    """从文件前 25 行注释中提取真正的中文功能说明，过滤仓库链接等垃圾行"""
-    for line in content.splitlines()[:25]:
+    for line in content.splitlines()[:30]:
         line = line.strip()
         if not line:
             continue
-
-        # 优先取标准元信息里的 #!name= 或 #!desc=
         if line.startswith(("#!name=", "#!desc=")):
             val = line.split("=", 1)[1].strip()
             if val and not any(k in val.lower() for k in IGNORE_KEYWORDS):
                 return val
-
-        if line.startswith(("#", "//", ";")):
-            text = line.lstrip("#/;=*- ").rstrip("=*- ").strip()
+        if line.startswith(("#", "//", ";", "*", "/*")):
+            text = line.lstrip("#/;=*- ").rstrip("=*-/ ").strip()
             if not text or not re.search(r"[\u4e00-\u9fff]", text):
                 continue
-            # 只要包含垃圾关键词就跳过
             if any(k in text.lower() for k in IGNORE_KEYWORDS):
                 continue
             return text[:35]
-
     return ""
 
 
 def get_display_name(filename: str, content: str, readme_map: dict, meta_name: str = "") -> str:
-    """按优先级确定最终中文名：插件自带name > Readme表格 > 常见词典 > 有效注释 > 原文件名"""
     key = filename.lower()
     if meta_name and not any(k in meta_name.lower() for k in IGNORE_KEYWORDS):
         return meta_name
@@ -233,6 +225,55 @@ def parse_loon(content: str, filename: str, readme_map: dict):
     return cn_name, build_sgmodule(cn_name, desc, rewrites, scripts, mitms, rules)
 
 
+def parse_js_script(content: str, rel_path: Path, filename: str, readme_map: dict):
+    """解析独立 .js 文件头部注释中的 QX/Surge 规则并生成 .sgmodule"""
+    rewrites, scripts, mitms = [], [], []
+    script_idx = 1
+    raw_js_url = f"{RAW_BASE}/{quote(rel_path.as_posix())}"
+
+    # 仅扫描前 100 行注释区域
+    for raw_line in content.splitlines()[:100]:
+        line = raw_line.strip().lstrip("/*# ").strip()
+        if not line:
+            continue
+
+        # 提取 hostname
+        if re.match(r"^hostname\s*=", line, flags=re.I):
+            hosts = line.split("=", 1)[1].strip()
+            hosts = hosts.replace("%APPEND%", "").replace("%INSERT%", "").strip()
+            if hosts:
+                mitms.extend([h.strip() for h in hosts.split(",") if h.strip()])
+            continue
+
+        # 匹配 QX 风格规则: ^https... url script-response-body ...
+        parts = line.split()
+        if len(parts) >= 3 and parts[1] == "url":
+            pattern, action = parts[0], parts[2].lower()
+            stype_map = {
+                "script-response-body": ("http-response", "1"),
+                "script-request-body": ("http-request", "1"),
+                "script-response-header": ("http-response", "0"),
+                "script-request-header": ("http-request", "0"),
+            }
+            if action in stype_map:
+                stype, req_body = stype_map[action]
+                scripts.append(
+                    f"{filename}_{script_idx} = type={stype}, pattern={pattern}, "
+                    f"requires-body={req_body}, max-size=0, script-path={raw_js_url}"
+                )
+                script_idx += 1
+            elif action in ("reject", "reject-200", "reject-img", "reject-dict", "reject-array"):
+                rewrites.append(f"{pattern} - {action}")
+
+    # 如果头部注释里没有提取到任何规则，说明不是带规则的独立插件，跳过
+    if not scripts and not rewrites:
+        return None, None
+
+    cn_name = get_display_name(filename, content, readme_map)
+    desc = f"来源: Script ({rel_path.as_posix()})"
+    return cn_name, build_sgmodule(cn_name, desc, rewrites, scripts, mitms)
+
+
 def build_sgmodule(name, desc, rewrites, scripts, mitms, rules=None) -> str:
     lines = [f"#!name={name}", f"#!desc={desc}", ""]
     if rules:
@@ -247,7 +288,7 @@ def build_sgmodule(name, desc, rewrites, scripts, mitms, rules=None) -> str:
     return "\n".join(lines)
 
 
-def write_index(loon_items: list, qx_items: list):
+def write_index(loon_items: list, qx_items: list, script_items: list):
     lines = [
         "# Shadowrocket 模块中文目录",
         "",
@@ -271,12 +312,22 @@ def write_index(loon_items: list, qx_items: list):
     for cn_name, fname in sorted(qx_items, key=lambda x: x[1].lower()):
         lines.append(f"| {cn_name} | [{fname}](./QX/{fname}) |")
 
+    lines.extend([
+        "",
+        "## 独立 JS 脚本转换模块（Script 目录）",
+        "",
+        "| 中文功能 | 模块文件 |",
+        "|---|---|",
+    ])
+    for cn_name, fname in sorted(script_items, key=lambda x: x[1].lower()):
+        lines.append(f"| {cn_name} | [{fname}](./Script/{fname}) |")
+
     (OUTPUT_DIR / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main():
     readme_map = load_readme_map()
-    loon_items, qx_items = [], []
+    loon_items, qx_items, script_items = [], [], []
 
     loon_dir = UPSTREAM_DIR / "Loon"
     if loon_dir.exists():
@@ -297,7 +348,18 @@ def main():
                 (OUTPUT_DIR / "QX" / fname).write_text(out, encoding="utf-8")
                 qx_items.append((cn_name, fname))
 
-    write_index(loon_items, qx_items)
+    script_dir = UPSTREAM_DIR / "Script"
+    if script_dir.exists():
+        for file in script_dir.rglob("*.js"):
+            content = file.read_text(encoding="utf-8", errors="ignore")
+            rel_path = file.relative_to(UPSTREAM_DIR)
+            cn_name, out = parse_js_script(content, rel_path, file.stem, readme_map)
+            if out:
+                fname = f"{file.stem}.sgmodule"
+                (OUTPUT_DIR / "Script" / fname).write_text(out, encoding="utf-8")
+                script_items.append((cn_name, fname))
+
+    write_index(loon_items, qx_items, script_items)
 
 
 if __name__ == "__main__":
