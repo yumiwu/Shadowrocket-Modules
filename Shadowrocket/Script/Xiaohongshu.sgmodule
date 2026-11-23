@@ -1,5 +1,5 @@
 #!name=小红书去广告
-#!desc=来源: Script (Script/Xiaohongshu.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Xiaohongshu.js
 
 [URL Rewrite]
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/tag\/ads_engage - reject-dict

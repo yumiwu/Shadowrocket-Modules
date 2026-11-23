@@ -1,5 +1,5 @@
 #!name=DHYbilibili
-#!desc=来源: Script (Script/Bilibili/DHYbilibili.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Bilibili/DHYbilibili.js
 
 [URL Rewrite]
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject

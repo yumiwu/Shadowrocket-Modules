@@ -1,0 +1,13 @@
+#!name=Bing首页简化
+#!desc=来源: QX (BingSimplify)
+
+[URL Rewrite]
+^https?:\/\/assets\.msn\.com\/service\/weather\/locations\/search - reject-dict
+^https:\/\/assets\.msn\.com\/service\/news\/feed\/pages\/startmhp - reject-dict
+^https?:\/\/api\.msn\.com\/weather - reject-dict
+
+[Script]
+BingSimplify_1 = type=http-response, pattern=^https?:\/\/sapphire\.api\.microsoftapp\.net\/config\/api\/v1\/get, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bing.js
+
+[MITM]
+hostname = %APPEND% sapphire.api.microsoftapp.net, assets.msn.com, api.msn.com

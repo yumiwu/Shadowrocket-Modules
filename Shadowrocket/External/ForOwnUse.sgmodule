@@ -1,0 +1,8 @@
+#!name=墨鱼合集
+#!desc=来源: QX (ForOwnUse)
+
+[Script]
+ForOwnUse_1 = type=http-response, pattern=http://ipadcms.caixin.com/tmp/articles, requires-body=1, max-size=0, script-path=https://github.com/ddgksf2013/dev/raw/main/CaiXinZhouKanProCrack.js
+
+[MITM]
+hostname = %APPEND% ipadcms.caixin.com

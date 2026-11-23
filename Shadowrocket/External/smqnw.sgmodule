@@ -1,0 +1,8 @@
+#!name=扫描全能王VIP
+#!desc=来源: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
+
+[Script]
+smqnw_1 = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
+
+[MITM]
+hostname = %APPEND% ap*.intsig.net

@@ -1,0 +1,8 @@
+#!name=美颜相机VIP
+#!desc=来源: https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/myCamera.js
+
+[Script]
+myCamera_1 = type=http-response, pattern=^https://.*.mei(yan|tu).com\/.*, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/myCamera.js
+
+[MITM]
+hostname = %APPEND% *.meiyan.com *.meitu.com

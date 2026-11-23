@@ -2,11 +2,50 @@
 
 点击对应模块进入文件页面后，点击右上角 **Raw** 即可复制订阅链接导入小火箭。
 
+## Readme 外链抓取模块（含 lths 等独立解锁）
+
+| 中文功能 | 模块文件 |
+|---|---|
+| 阿里云盘倍速 | [alicloud.sgmodule](./External/alicloud.sgmodule) |
+| 阿里云VIP | [alidrive.sgmodule](./External/alidrive.sgmodule) |
+| 微信小程序 | [Applet.sgmodule](./External/Applet.sgmodule) |
+| 白描-OCR-VIP | [baimiao.sgmodule](./External/baimiao.sgmodule) |
+| B站CC繁体字幕转简体 | [Bilibili_CC.sgmodule](./External/Bilibili_CC.sgmodule) |
+| Bing首页简化 | [BingSimplify.sgmodule](./External/BingSimplify.sgmodule) |
+| 酷安去广告 | [coolapk.sgmodule](./External/coolapk.sgmodule) |
+| 滴答清单VIP | [ddqd.sgmodule](./External/ddqd.sgmodule) |
+| 豆瓣电影网页优化+快捷观影 | [Douban.sgmodule](./External/Douban.sgmodule) |
+| 各种流媒体字幕翻译 | [Dualsub.sgmodule](./External/Dualsub.sgmodule) |
+| Google自动翻页 | [EndlessGoogle.sgmodule](./External/EndlessGoogle.sgmodule) |
+| 墨鱼合集 | [ForOwnUse.sgmodule](./External/ForOwnUse.sgmodule) |
+| 爱奇艺去广告 | [iqiyi_open_ads.sgmodule](./External/iqiyi_open_ads.sgmodule) |
+| 聊天话术VIP | [lths.sgmodule](./External/lths.sgmodule) |
+| 美颜相机VIP | [myCamera.sgmodule](./External/myCamera.sgmodule) |
+| 百度网盘去广告 | [MyRewrite.sgmodule](./External/MyRewrite.sgmodule) |
+| 萌猪记账VIP | [mzjz.sgmodule](./External/mzjz.sgmodule) |
+| Pixiv去广告 | [pixivAds.sgmodule](./External/pixivAds.sgmodule) |
+| Pornhub去广告 | [pornhub.sgmodule](./External/pornhub.sgmodule) |
+| 起点去广告[卸载重装] | [qidian.sgmodule](./External/qidian.sgmodule) |
+| 奇心合集 | [qxrules.sgmodule](./External/qxrules.sgmodule) |
+| 多多视频去广告 | [rrtv_json.sgmodule](./External/rrtv_json.sgmodule) |
+| 沙拉祝频解锁 | [slsp.sgmodule](./External/slsp.sgmodule) |
+| 扫描全能王VIP | [smqnw.sgmodule](./External/smqnw.sgmodule) |
+| Soul解除送礼私聊限制 | [Soul.sgmodule](./External/Soul.sgmodule) |
+| 奇心去广告 | [tailadv.sgmodule](./External/tailadv.sgmodule) |
+| 百度贴吧去广告 | [tieba-qx.sgmodule](./External/tieba-qx.sgmodule) |
+| 微信110解锁被屏蔽的URL | [UnblockURLinWeChat.sgmodule](./External/UnblockURLinWeChat.sgmodule) |
+| UposRedirect | [UposRedirect.sgmodule](./External/UposRedirect.sgmodule) |
+| TopWidgets解锁 | [widgets.sgmodule](./External/widgets.sgmodule) |
+| 有道词典VIP | [wyydcd.sgmodule](./External/wyydcd.sgmodule) |
+| 喜马拉雅去广告 | [Ximalaya.sgmodule](./External/Ximalaya.sgmodule) |
+| 蜗牛读书VIP | [yywnds.sgmodule](./External/yywnds.sgmodule) |
+| 知乎去广告 | [zheye.sgmodule](./External/zheye.sgmodule) |
+| 中华诗词库VIP | [zhsck.sgmodule](./External/zhsck.sgmodule) |
+
 ## Loon 转换模块
 
 | 中文功能 | 模块文件 |
 |---|---|
-| 91Porn_ads | [91Porn_ads.sgmodule](./Loon/91Porn_ads.sgmodule) |
 | TestFlight账户管理 | [Account.sgmodule](./Loon/Account.sgmodule) |
 | 莫离去广告 | [AdBlock.sgmodule](./Loon/AdBlock.sgmodule) |
 | 阿里云解锁VIP 净化 | [AliYun_VIP.sgmodule](./Loon/AliYun_VIP.sgmodule) |
@@ -22,7 +61,6 @@
 | !name = 远程资源转换器 | [Convert.sgmodule](./Loon/Convert.sgmodule) |
 | 帆书 | [Fdds.sgmodule](./Loon/Fdds.sgmodule) |
 | 高德地图去广告 | [Gaode.sgmodule](./Loon/Gaode.sgmodule) |
-| 配置增强 | [General.sgmodule](./Loon/General.sgmodule) |
 | 获取Cookie | [GetCookie.sgmodule](./Loon/GetCookie.sgmodule) |
 | Grow破解 | [Grow.sgmodule](./Loon/Grow.sgmodule) |
 | 京东比价 | [JdPrice.sgmodule](./Loon/JdPrice.sgmodule) |
@@ -32,7 +70,6 @@
 | 酷我音乐SVIP+净化 | [Kuwo.sgmodule](./Loon/Kuwo.sgmodule) |
 | !name = Spotify歌词翻译 | [Lyrics.sgmodule](./Loon/Lyrics.sgmodule) |
 | 美队TV | [Mdtv.sgmodule](./Loon/Mdtv.sgmodule) |
-| Node Detection Tool | [MediaCheck.sgmodule](./Loon/MediaCheck.sgmodule) |
 | 芒果TV | [Mgtv.sgmodule](./Loon/Mgtv.sgmodule) |
 | 美图秀秀 | [Mtxx.sgmodule](./Loon/Mtxx.sgmodule) |
 | 修改 | [Pdfviewer.sgmodule](./Loon/Pdfviewer.sgmodule) |
@@ -40,8 +77,6 @@
 | !name = 远程资源转换器 | [Rewrite_to_Loon.sgmodule](./Loon/Rewrite_to_Loon.sgmodule) |
 | Script Hub: 重写 & 规则集转换 | [ScriptHub.sgmodule](./Loon/ScriptHub.sgmodule) |
 | !desc = Script Hub: 重写 & 规则集转换 | [ScriptHub.sgmodule](./Loon/ScriptHub.sgmodule) |
-| 超级搜索 | [Search.sgmodule](./Loon/Search.sgmodule) |
-| Skip Proxy Lists | [SkipProxy.sgmodule](./Loon/SkipProxy.sgmodule) |
 | Soul破解 | [Soul.sgmodule](./Loon/Soul.sgmodule) |
 | SparkMail | [SparkMail.sgmodule](./Loon/SparkMail.sgmodule) |
 | Spotify会员 | [Spotify.sgmodule](./Loon/Spotify.sgmodule) |
@@ -51,7 +86,6 @@
 | 墨鱼去广告 | [StartUp.sgmodule](./Loon/StartUp.sgmodule) |
 | !name = 短视频 | [Story.sgmodule](./Loon/Story.sgmodule) |
 | !name = TikTok解锁 | [TikTok.sgmodule](./Loon/TikTok.sgmodule) |
-| UpdateResources | [UpdateResources.sgmodule](./Loon/UpdateResources.sgmodule) |
 | WPS破解 | [WPS.sgmodule](./Loon/WPS.sgmodule) |
 | 喜马拉雅 | [Xmly.sgmodule](./Loon/Xmly.sgmodule) |
 | 淫荡猫 | [Ydm.sgmodule](./Loon/Ydm.sgmodule) |
@@ -79,9 +113,7 @@
 | Lightroom | [Lightroom.sgmodule](./QX/Lightroom.sgmodule) |
 | 芒果TV | [MgTV.sgmodule](./QX/MgTV.sgmodule) |
 | 美图秀秀VIP+粉钻 | [MTxiuxiu.sgmodule](./QX/MTxiuxiu.sgmodule) |
-| NewBing | [NewBing.sgmodule](./QX/NewBing.sgmodule) |
 | PS | [PS.sgmodule](./QX/PS.sgmodule) |
-| QuantumultX 莫离懒人配置 | [QuantumultX.sgmodule](./QX/QuantumultX.sgmodule) |
 | 扫描全能王 | [Saomiao.sgmodule](./QX/Saomiao.sgmodule) |
 | Safari超级搜索翻译·社区·购物·换区·视频·引擎 | [Search.sgmodule](./QX/Search.sgmodule) |
 | Soul解除送礼私聊限制 | [Soul.sgmodule](./QX/Soul.sgmodule) |
@@ -100,10 +132,9 @@
 | WPS会员解锁 | [WPS.sgmodule](./QX/WPS.sgmodule) |
 | 小红书去广告 | [XHS.sgmodule](./QX/XHS.sgmodule) |
 | 喜马拉雅去广告 | [Ximalaya.sgmodule](./QX/Ximalaya.sgmodule) |
-| 油管去广告画中画 | [YouTube.sgmodule](./QX/YouTube.sgmodule) |
 | 知乎处理用户信息 | [Zhihu.sgmodule](./QX/Zhihu.sgmodule) |
 
-## 独立 JS 脚本转换模块（Script 目录）
+## 本仓库 Script 目录模块
 
 | 中文功能 | 模块文件 |
 |---|---|

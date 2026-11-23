@@ -1,5 +1,5 @@
 #!name=> 拦截100解锁永久超级会员
-#!desc=来源: Script (Script/Block100.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Block100.js
 
 [Script]
 Block100_1 = type=http-response, pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Block100.js

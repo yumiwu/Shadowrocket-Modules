@@ -1,0 +1,8 @@
+#!name=爱奇艺去广告
+#!desc=来源: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js
+
+[Script]
+iqiyi_open_ads_1 = type=http-response, pattern=^https?:\/\/.*cupid\.iqiyi\.com\/mixer\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js
+
+[MITM]
+hostname = %APPEND% *cupid.iqiyi.com

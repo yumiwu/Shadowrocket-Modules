@@ -1,0 +1,8 @@
+#!name=Soul解除送礼私聊限制
+#!desc=来源: https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/Soul.js
+
+[Script]
+Soul_1 = type=http-response, pattern=^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/Soul.js
+
+[MITM]
+hostname = %APPEND% api-chat.soulapp.cn

@@ -1,5 +1,5 @@
 #!name=会员相关 API 修改
-#!desc=来源: Script (Script/ydm.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/ydm.js
 
 [URL Rewrite]
 ^https:\/\/(?:dd38dkt7dfvyr|d2x03a61ogs2x5|d3lijns9322mkl)\.cloudfront\.net\/api\/(?:sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject

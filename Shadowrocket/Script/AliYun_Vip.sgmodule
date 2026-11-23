@@ -1,5 +1,5 @@
 #!name=AliYun_Vip
-#!desc=来源: Script (Script/AliYun/AliYun_Vip.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/AliYun/AliYun_Vip.js
 
 [Script]
 AliYun_Vip_1 = type=http-response, pattern=^https?:\/\/(api|member)\.aliyundrive\.com, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/AliYun/AliYun_Vip.js

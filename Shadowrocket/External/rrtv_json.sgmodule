@@ -1,0 +1,14 @@
+#!name=多多视频去广告
+#!desc=来源: https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+
+[URL Rewrite]
+https://api.juxingclub.com/storage/business/rootName/app/homePage\?dataType=JSON - reject-dict
+
+[Script]
+rrtv_json_1 = type=http-response, pattern=^https:\/\/api.juxingclub.com\/ad\/getAll, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+rrtv_json_2 = type=http-response, pattern=^https?:\/\/api.juxingclub.com\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+rrtv_json_3 = type=http-response, pattern=https://api.juxingclub.com/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+rrtv_json_4 = type=http-response, pattern=^https?:\/\/api.juxingclub.com\/app\/config\/h5NativeBar, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+
+[MITM]
+hostname = %APPEND% api.juxingclub.com

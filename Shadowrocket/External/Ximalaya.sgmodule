@@ -1,0 +1,33 @@
+#!name=喜马拉雅去广告
+#!desc=来源: QX (Ximalaya)
+
+[URL Rewrite]
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ - reject
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
+^https?:\/\/gslb.*\.xima.*\.com\/ - reject
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant - reject
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread - reject
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop - reject
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d - reject
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck - reject
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* - reject
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location - reject
+^https?:\/\/.*\.xima.*\.com\/(hub\/)?hotWord - reject
+^https?:\/\/.*\.xima.*\.com\/(hub\/)?hotWordBillboard - reject
+^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord - reject
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
+
+[Script]
+Ximalaya_1 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ximalaya_json.js
+Ximalaya_2 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ximalaya_json.js
+Ximalaya_3 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ximalaya_json.js
+Ximalaya_4 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ximalaya_json.js
+Ximalaya_5 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/ximalaya_json.js
+
+[MITM]
+hostname = %APPEND% *.xima*.*, *.xmcdn.*

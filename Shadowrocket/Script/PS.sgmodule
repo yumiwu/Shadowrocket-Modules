@@ -1,5 +1,5 @@
 #!name=PS
-#!desc=来源: Script (Script/PS.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/PS.js
 
 [Script]
 PS_1 = type=http-response, pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/PS.js

@@ -1,5 +1,5 @@
 #!name=Pornhub去广告
-#!desc=来源: Script (Script/Pornhub/Pornhub.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Pornhub/Pornhub.js
 
 [URL Rewrite]
 ^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads - reject-dict

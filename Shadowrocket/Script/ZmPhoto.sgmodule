@@ -1,5 +1,5 @@
 #!name=IDPhoto - 最美证件照
-#!desc=来源: Script (Script/ZmPhoto.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/ZmPhoto.js
 
 [Script]
 ZmPhoto_1 = type=http-response, pattern=^https:\/\/fufei\.fengyunsoft\.cn\/api\/client\/info, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/ZmPhoto.js

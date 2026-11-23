@@ -1,0 +1,8 @@
+#!name=白描-OCR-VIP
+#!desc=来源: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/baimiao.js
+
+[Script]
+baimiao_1 = type=http-response, pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/baimiao.js
+
+[MITM]
+hostname = %APPEND% baimiao.uzero.cn

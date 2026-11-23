@@ -1,0 +1,8 @@
+#!name=有道词典VIP
+#!desc=来源: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/wyydcd.js
+
+[Script]
+wyydcd_1 = type=http-response, pattern=^https:\/\/dict\.youdao\.com\/vip\/user\/status, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/wyydcd.js
+
+[MITM]
+hostname = %APPEND% dict.youdao.com

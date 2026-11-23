@@ -1,5 +1,5 @@
 #!name=茶杯狐
-#!desc=来源: Script (Script/Cupbox/Cupbox.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Cupbox/Cupbox.js
 
 [Script]
 Cupbox_1 = type=http-response, pattern=^https?:/\/cupfox\.app(\/?$|\/([?]|search).*$), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Cupbox/Cupbox.js

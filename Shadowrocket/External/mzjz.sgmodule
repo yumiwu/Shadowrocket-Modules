@@ -1,0 +1,8 @@
+#!name=萌猪记账VIP
+#!desc=来源: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mzjz.js
+
+[Script]
+mzjz_1 = type=http-response, pattern=^https:\/\/xrckeji\.com\/itally\/app\/user\/query, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mzjz.js
+
+[MITM]
+hostname = %APPEND% xrckeji.com

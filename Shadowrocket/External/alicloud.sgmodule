@@ -1,0 +1,19 @@
+#!name=阿里云盘倍速
+#!desc=来源: https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+
+[URL Rewrite]
+^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/onboard_list - reject
+^https?:\/\/api\.(aliyundrive|alipan)\.com\/adrive\/v2\/backup\/device - reject
+
+[Script]
+alicloud_1 = type=http-response, pattern=^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.1\/users\/me\/vip\/info, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+alicloud_2 = type=http-response, pattern=^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/tools, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+alicloud_3 = type=http-response, pattern=^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/me, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+alicloud_4 = type=http-response, pattern=^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/vip\/info, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+alicloud_5 = type=http-response, pattern=^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/feature\/list, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+alicloud_6 = type=http-response, pattern=^https?:\/\/api\.(aliyundrive|alipan)\.com\/apps\/v2\/users\/home\/widgets, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+alicloud_7 = type=http-response, pattern=^https?:\/\/user\.(aliyundrive|alipan)\.com\/v2\/user\/get, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+alicloud_8 = type=http-response, pattern=^https?:\/\/member\.(aliyundrive|alipan)\.com\/v2\/activity\/sign_in_info, requires-body=1, max-size=0, script-path=https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+
+[MITM]
+hostname = %APPEND% api.alipan.com, member.aliyundrive.com, member.alipan.com, api.aliyundrive.com

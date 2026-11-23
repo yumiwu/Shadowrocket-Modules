@@ -1,5 +1,5 @@
 #!name=扫描全能王
-#!desc=来源: Script (Script/Saomiao.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Saomiao.js
 
 [Script]
 Saomiao_1 = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Saomiao.js

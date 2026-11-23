@@ -1,5 +1,5 @@
 #!name=✅百度文库
-#!desc=来源: Script (Script/Baiduwk.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Baiduwk.js
 
 [Script]
 Baiduwk_1 = type=http-response, pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Baiduwk.js

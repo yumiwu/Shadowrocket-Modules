@@ -1,0 +1,8 @@
+#!name=中华诗词库VIP
+#!desc=来源: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/zhsck.js
+
+[Script]
+zhsck_1 = type=http-response, pattern=http:\/\/api\.chuangqi\.store\/, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/zhsck.js
+
+[MITM]
+hostname = %APPEND% api.chuangqi.store

@@ -1,5 +1,5 @@
 #!name=饿了么获取COOKIE
-#!desc=来源: Script (Script/Elem/elemGetCookies.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Elem/elemGetCookies.js
 
 [Script]
 elemGetCookies_1 = type=http-request, pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Elem/elemGetCookies.js

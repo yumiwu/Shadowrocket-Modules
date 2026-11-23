@@ -1,0 +1,8 @@
+#!name=蜗牛读书VIP
+#!desc=来源: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/yywnds.js
+
+[Script]
+yywnds_1 = type=http-response, pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/yywnds.js
+
+[MITM]
+hostname = %APPEND% p.du.163.com

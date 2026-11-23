@@ -1,5 +1,5 @@
 #!name=WeChatUrl - 微信链接跳转
-#!desc=来源: Script (Script/Wechat.js)
+#!desc=来源: https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Wechat.js
 
 [Script]
 Wechat_1 = type=http-response, pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Moli-X/Resources/main/Script/Wechat.js
